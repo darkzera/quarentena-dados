@@ -32,7 +32,6 @@ print(moviesAndRate.head())
 # Valores [filmes] q nao tem nota -> NaN (Not a nUmber)
 print ('------------------------------------------------------------')
 print(moviesAndRate.sort_values('rating', ascending=False).head())
-
 #Grafico com votos do filme 1 
 rates.query("movieId== 2 ")["rating"].plot(kind='hist')
 

@@ -7,7 +7,6 @@ rates = pd.read_csv('../filmes/ratings.csv')
 print ('------------------- Desaf 3 -----------------------')
 print('Colocar o numero de avaliacoes por filme, nao é só a media mas o total de votos por filme')
 print('-> UserID: Quantidade de votos por filme')
-
 mediaFilme = rates.groupby("movieId")["rating"].mean()
 #O correto seria contar a rate? o rsultado calculado é o mesmo (not sure about)
 #Mas  poderia ser diferente dependendo dos dados?? 
@@ -17,17 +16,12 @@ gradoT = grado.join(qtdVotos, on="movieId")
 print(gradoT)
 ## parte 2 desafio Arrendondar valores de nota_media p/ duas casas decimais
 print ('------------------- Arrendondar vlres de rates -----------------------')
-gradoT['rating'] = gradoT.rating.astype('double64')
-#gradoT['userId'] = gradoT.userId.astype('int64')
+## Nao consegui converter ssa porra
+#gradoT['rating'] = gradoT.rating.astype('double64')
+gradoT['userId'] = gradoT.userId.astype('double')
 print(gradoT)
 
-
-
-
-
-
-
-### descobrir os generos dos filmes -> quais sao únicos) - HARD
+### descobrir os generos dos filmes -> quais sao únicos) - gave up
 ####
 
 plt.show()
